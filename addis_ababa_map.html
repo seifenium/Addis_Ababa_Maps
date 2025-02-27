@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_01c381278d80b6486f00221eea8d20cd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_01c381278d80b6486f00221eea8d20cd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_01c381278d80b6486f00221eea8d20cd = L.map(
+                "map_01c381278d80b6486f00221eea8d20cd",
+                {
+                    center: [9.005401, 38.763611],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1118ec448500ec4459898c17a91a5024 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_01c381278d80b6486f00221eea8d20cd);
+        
+    
+            var marker_2743a7417de2e7d62c9abcc9dc5b46ac = L.marker(
+                [9.005401, 38.763611],
+                {}
+            ).addTo(map_01c381278d80b6486f00221eea8d20cd);
+        
+    
+            var icon_d5e3bbabc625145c376c920cc0944533 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2743a7417de2e7d62c9abcc9dc5b46ac.setIcon(icon_d5e3bbabc625145c376c920cc0944533);
+        
+    
+        var popup_3d5788e930ef06ffb96e5f709b7ef194 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d64c99afb47d49f56e90483332a4ed0 = $(`<div id="html_6d64c99afb47d49f56e90483332a4ed0" style="width: 100.0%; height: 100.0%;">Addis Ababa</div>`)[0];
+                popup_3d5788e930ef06ffb96e5f709b7ef194.setContent(html_6d64c99afb47d49f56e90483332a4ed0);
+            
+        
+
+        marker_2743a7417de2e7d62c9abcc9dc5b46ac.bindPopup(popup_3d5788e930ef06ffb96e5f709b7ef194)
+        ;
+
+        
+    
+    
+            var polygon_13d2f85151740608e5e0994b54c48bfd = L.polygon(
+                [[9.015, 38.75], [9.02, 38.75], [9.02, 38.76], [9.015, 38.76], [9.015, 38.75]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_01c381278d80b6486f00221eea8d20cd);
+        
+    
+        var popup_9c3251f85ffb5c152ed502361b278efa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6c4e578b0af20395fe078769e7598400 = $(`<div id="html_6c4e578b0af20395fe078769e7598400" style="width: 100.0%; height: 100.0%;">     <strong>Park Name:</strong> Unity Park<br>     <strong>Area:</strong> 10 hectares<br>     <strong>Features:</strong> Playground, Walking Paths<br>     <strong>Status:</strong> Open to Public     </div>`)[0];
+                popup_9c3251f85ffb5c152ed502361b278efa.setContent(html_6c4e578b0af20395fe078769e7598400);
+            
+        
+
+        polygon_13d2f85151740608e5e0994b54c48bfd.bindPopup(popup_9c3251f85ffb5c152ed502361b278efa)
+        ;
+
+        
+    
+    
+            var polygon_aee9ebb1d532f68666972f7e3239850c = L.polygon(
+                [[9.01, 38.77], [9.015, 38.77], [9.015, 38.775], [9.01, 38.775], [9.01, 38.77]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_01c381278d80b6486f00221eea8d20cd);
+        
+    
+        var popup_5f4c0a038871ed49bdb16d2f185b9cb1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c96919e4921a359c0d7767d2c16143c0 = $(`<div id="html_c96919e4921a359c0d7767d2c16143c0" style="width: 100.0%; height: 100.0%;">     <strong>Parking Name:</strong> Addis Ababa Parking Lot<br>     <strong>Capacity:</strong> 200 cars<br>     <strong>Fee:</strong> 10 ETB per hour<br>     <strong>Status:</strong> Open 24/7     </div>`)[0];
+                popup_5f4c0a038871ed49bdb16d2f185b9cb1.setContent(html_c96919e4921a359c0d7767d2c16143c0);
+            
+        
+
+        polygon_aee9ebb1d532f68666972f7e3239850c.bindPopup(popup_5f4c0a038871ed49bdb16d2f185b9cb1)
+        ;
+
+        
+    
+</script>
+</html>
