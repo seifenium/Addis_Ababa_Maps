@@ -1,42 +1,158 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-#sidebar {
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    overflow-y: auto;
-    background: #f8f9fa;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
 }
 
-#sidebar h2 {
-    margin-bottom: 20px;
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-#sidebar .nav-link {
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-#sidebar .nav-link.active {
-    background-color: #007bff;
-    color: white;
+header nav ul li a {
+  color: white;
+  text-decoration: none;
 }
 
-#main-content {
-    margin-left: 250px;
-    height: 100vh;
+header .auth-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f4f4f4;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cta-buttons button {
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-buttons .primary {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.cta-buttons .secondary {
+  background-color: #333;
+  color: white;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: white;
+}
+
+.feature {
+  text-align: center;
+  max-width: 250px;
+}
+
+.feature img {
+  width: 50px;
+  height: 50px;
+}
+
+.map-preview {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
 }
 
 #map {
-    height: 100%;
+  height: 400px;
+  background-color: #ccc;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.pricing {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+}
+
+.plans {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.plan {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: #333;
+  color: white;
+}
+
+footer .quick-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer .newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer .newsletter button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
 }
