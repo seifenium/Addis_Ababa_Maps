@@ -54,9 +54,14 @@ header .auth-buttons button {
   margin-bottom: 40px;
 }
 
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 .cta-buttons button {
   padding: 15px 30px;
-  margin: 0 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -73,10 +78,20 @@ header .auth-buttons button {
 }
 
 .features {
-  display: flex;
-  justify-content: space-around;
+  text-align: center;
   padding: 50px 20px;
   background-color: white;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .feature {
@@ -111,6 +126,8 @@ header .auth-buttons button {
 .plans {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-top: 20px;
 }
 
@@ -119,6 +136,7 @@ header .auth-buttons button {
   padding: 20px;
   border-radius: 10px;
   width: 30%;
+  min-width: 250px;
 }
 
 .testimonials {
@@ -133,6 +151,8 @@ footer {
   padding: 50px 20px;
   background-color: #333;
   color: white;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 footer .quick-links a {
