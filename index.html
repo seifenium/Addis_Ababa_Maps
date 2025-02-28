@@ -4,138 +4,183 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Land Parcel Viewer</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Leaflet CSS for the map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="logo">LandParcelViewer</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#map">Map Viewer</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
-    <div class="auth-buttons">
-      <button class="login">Login</button>
-      <button class="signup">Sign Up</button>
-    </div>
-  </header>
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <h2>Menu</h2>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Explore Land Parcels with Ease</h1>
-    <p>Access, View, and Download Data</p>
-    <div class="cta-buttons">
-      <button class="primary">View Map</button>
-      <button class="secondary">How It Works</button>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <div id="main-content">
+    <!-- Header -->
+    <header class="bg-success text-white p-3">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="logo">LandParcelViewer</div>
+          <nav>
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#about">About Us</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#map">Map Viewer</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#pricing">Pricing</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#faq">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="auth-buttons">
+            <button class="btn btn-light me-2">Login</button>
+            <button class="btn btn-outline-light">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <!-- Features Section -->
-  <section class="features">
-    <h2>Features</h2>
-    <div class="feature-container">
-      <div class="feature">
-        <img src="map-icon.png" alt="Map Icon">
-        <h3>Interactive Map</h3>
-        <p>Zoom, pan, and explore land parcels with our user-friendly map interface.</p>
+    <!-- Hero Section -->
+    <section class="hero bg-light text-center py-5">
+      <div class="container">
+        <h1 class="display-4">Explore Land Parcels with Ease</h1>
+        <p class="lead">Access, View, and Download Data</p>
+        <div class="cta-buttons">
+          <button class="btn btn-success btn-lg me-3">View Map</button>
+          <button class="btn btn-outline-success btn-lg">How It Works</button>
+        </div>
       </div>
-      <div class="feature">
-        <img src="download-icon.png" alt="Download Icon">
-        <h3>Data Download</h3>
-        <p>Purchase a token to download detailed land parcel data in multiple formats.</p>
-      </div>
-      <div class="feature">
-        <img src="awareness-icon.png" alt="Awareness Icon">
-        <h3>Public Awareness</h3>
-        <p>Stay informed about land ownership, zoning, and boundaries.</p>
-      </div>
-      <div class="feature">
-        <img src="payment-icon.png" alt="Payment Icon">
-        <h3>Secure Payments</h3>
-        <p>Safe and secure payment options for hassle-free transactions.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Map Preview Section -->
-  <section class="map-preview">
-    <h2>Start Exploring Now</h2>
-    <div id="map"></div>
-    <p>No payment required to view the map.</p>
-  </section>
-
-  <!-- Pricing Section -->
-  <section class="pricing">
-    <h2>Pricing Plans</h2>
-    <div class="plans">
-      <div class="plan">
-        <h3>Basic Token</h3>
-        <p>$10</p>
-        <p>Download data for up to 5 parcels.</p>
-        <button>Buy Now</button>
+    <!-- Features Section -->
+    <section class="features py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Features</h2>
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <img src="map-icon.png" alt="Map Icon" class="mb-3">
+            <h3>Interactive Map</h3>
+            <p>Zoom, pan, and explore land parcels with our user-friendly map interface.</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <img src="download-icon.png" alt="Download Icon" class="mb-3">
+            <h3>Data Download</h3>
+            <p>Purchase a token to download detailed land parcel data in multiple formats.</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <img src="awareness-icon.png" alt="Awareness Icon" class="mb-3">
+            <h3>Public Awareness</h3>
+            <p>Stay informed about land ownership, zoning, and boundaries.</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <img src="payment-icon.png" alt="Payment Icon" class="mb-3">
+            <h3>Secure Payments</h3>
+            <p>Safe and secure payment options for hassle-free transactions.</p>
+          </div>
+        </div>
       </div>
-      <div class="plan">
-        <h3>Premium Token</h3>
-        <p>$25</p>
-        <p>Download data for up to 20 parcels.</p>
-        <button>Buy Now</button>
+    </section>
+
+    <!-- Map Preview Section -->
+    <section class="map-preview bg-light py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Start Exploring Now</h2>
+        <div id="map" class="map-container"></div>
+        <p class="text-center mt-3">No payment required to view the map.</p>
       </div>
-      <div class="plan">
-        <h3>Enterprise Token</h3>
-        <p>$50</p>
-        <p>Unlimited downloads for 30 days.</p>
-        <button>Buy Now</button>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Pricing Plans</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title">Basic Token</h3>
+                <p class="card-text">$10</p>
+                <p class="card-text">Download data for up to 5 parcels.</p>
+                <button class="btn btn-success">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title">Premium Token</h3>
+                <p class="card-text">$25</p>
+                <p class="card-text">Download data for up to 20 parcels.</p>
+                <button class="btn btn-success">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title">Enterprise Token</h3>
+                <p class="card-text">$50</p>
+                <p class="card-text">Unlimited downloads for 30 days.</p>
+                <button class="btn btn-success">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <h2>What Our Users Say</h2>
-    <div class="testimonial">
-      <p>"This platform made it so easy to access land parcel data. Highly recommended!"</p>
-      <p>– John D.</p>
-    </div>
-    <div class="rating">4.8/5</div>
-  </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#privacy" class="text-white">Privacy Policy</a></li>
+              <li><a href="#terms" class="text-white">Terms of Service</a></li>
+              <li><a href="#refund" class="text-white">Refund Policy</a></li>
+              <li><a href="#support" class="text-white">Support</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Contact Info</h5>
+            <p>Email: support@landparcelviewer.com</p>
+            <p>Phone: +1-800-123-4567</p>
+          </div>
+          <div class="col-md-3">
+            <h5>Follow Us</h5>
+            <ul class="list-unstyled">
+              <li><a href="#facebook" class="text-white">Facebook</a></li>
+              <li><a href="#twitter" class="text-white">Twitter</a></li>
+              <li><a href="#linkedin" class="text-white">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Newsletter</h5>
+            <input type="email" class="form-control mb-2" placeholder="Enter your email">
+            <button class="btn btn-success">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="quick-links">
-      <a href="#privacy">Privacy Policy</a>
-      <a href="#terms">Terms of Service</a>
-      <a href="#refund">Refund Policy</a>
-      <a href="#support">Support</a>
-    </div>
-    <div class="contact-info">
-      <p>Email: support@landparcelviewer.com</p>
-      <p>Phone: +1-800-123-4567</p>
-    </div>
-    <div class="social-media">
-      <a href="#facebook">Facebook</a>
-      <a href="#twitter">Twitter</a>
-      <a href="#linkedin">LinkedIn</a>
-    </div>
-    <div class="newsletter">
-      <p>Subscribe to our newsletter for updates and offers.</p>
-      <input type="email" placeholder="Enter your email">
-      <button>Subscribe</button>
-    </div>
-  </footer>
-
-  <!-- Leaflet JS for the map -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <!-- Custom Map Script -->
+  <!-- Leaflet JS -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+  <!-- Custom JS -->
   <script src="map.js"></script>
-  <!-- Main Script -->
-  <script src="script.js"></script>
 </body>
 </html>
