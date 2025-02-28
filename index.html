@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Land Parcel Viewer</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Leaflet CSS for the map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 <body>
   <!-- Header Section -->
@@ -38,25 +40,28 @@
 
   <!-- Features Section -->
   <section class="features">
-    <div class="feature">
-      <img src="map-icon.png" alt="Map Icon">
-      <h3>Interactive Map</h3>
-      <p>Zoom, pan, and explore land parcels with our user-friendly map interface.</p>
-    </div>
-    <div class="feature">
-      <img src="download-icon.png" alt="Download Icon">
-      <h3>Data Download</h3>
-      <p>Purchase a token to download detailed land parcel data in multiple formats.</p>
-    </div>
-    <div class="feature">
-      <img src="awareness-icon.png" alt="Awareness Icon">
-      <h3>Public Awareness</h3>
-      <p>Stay informed about land ownership, zoning, and boundaries.</p>
-    </div>
-    <div class="feature">
-      <img src="payment-icon.png" alt="Payment Icon">
-      <h3>Secure Payments</h3>
-      <p>Safe and secure payment options for hassle-free transactions.</p>
+    <h2>Features</h2>
+    <div class="feature-container">
+      <div class="feature">
+        <img src="map-icon.png" alt="Map Icon">
+        <h3>Interactive Map</h3>
+        <p>Zoom, pan, and explore land parcels with our user-friendly map interface.</p>
+      </div>
+      <div class="feature">
+        <img src="download-icon.png" alt="Download Icon">
+        <h3>Data Download</h3>
+        <p>Purchase a token to download detailed land parcel data in multiple formats.</p>
+      </div>
+      <div class="feature">
+        <img src="awareness-icon.png" alt="Awareness Icon">
+        <h3>Public Awareness</h3>
+        <p>Stay informed about land ownership, zoning, and boundaries.</p>
+      </div>
+      <div class="feature">
+        <img src="payment-icon.png" alt="Payment Icon">
+        <h3>Secure Payments</h3>
+        <p>Safe and secure payment options for hassle-free transactions.</p>
+      </div>
     </div>
   </section>
 
@@ -126,6 +131,11 @@
     </div>
   </footer>
 
+  <!-- Leaflet JS for the map -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Custom Map Script -->
+  <script src="map.js"></script>
+  <!-- Main Script -->
   <script src="script.js"></script>
 </body>
 </html>
