@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Default Title {% endblock %}</title>
+    {% block head %}
+    <!-- Additional head content can be added here -->
+    {% endblock %}
+</head>
+<body>
+    <header>
+        {% block header %}
+        <!-- Default header content -->
+        {% endblock %}
+    </header>
+    <main>
+        {% block content %}
+        <!-- Main content goes here -->
+        {% endblock %}
+    </main>
+    <footer>
+        {% block footer %}
+        <!-- Default footer content -->
+        {% endblock %}
+    </footer>
+</body>
+</html>
