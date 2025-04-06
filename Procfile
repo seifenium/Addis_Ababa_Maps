@@ -1,1 +1,1 @@
-web: gunicorn land_viewer.wsgi --log-file -
+web: python3 -m gunicorn land_viewer.wsgi
