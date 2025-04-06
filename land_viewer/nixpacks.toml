@@ -1,15 +1,26 @@
 [build]
 python_version = "3.11.2"
 
-[phases.install]
-cmds = [
-    "pip install -r requirements.txt",
+[phases]
+setup = [
+    "apt-get update",
+    "apt-get install -y --no-install-recommends libpq-dev python3-dev"  # For PostgreSQL support
 ]
 
-[phases.build]
-cmds = [
+install = [
+    "pip install --upgrade pip",
+    "pip install -r requirements.txt"
+]
+
+build = [
     "python manage.py collectstatic --noinput",
+    "python manage.py migrate"
 ]
 
 [start]
-cmd = "gunicorn land_viewer.wsgi:application --bind 0.0.0.0:$PORT"
+cmd = "gunicorn land_viewer.wsgi:application --workers 3 --timeout 120 --bind 0.0.0.0:$PORT"
+
+[env]
+DJANGO_SETTINGS_MODULE = "land_viewer.settings"
+PYTHONUNBUFFERED = "1"
+DISABLE_COLLECTSTATIC = "0"  # Set to "1" if static files fail
